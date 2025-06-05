@@ -67,6 +67,12 @@ public:
 	}
 
 	list<Duplicates> getAllDups() {
+		if (streetName == "Gereblye utca") {
+			cout << "test";
+		}
+		if (streetName == "Gereblye") {
+			cout << "test";
+		}
 		list<Duplicates> dups;
 		if (this->numbers_odd.size() > 0) {
 			list<Duplicates> dupsO = getDupsInList(this->numbers_odd, 'O');
@@ -103,7 +109,7 @@ public:
 					dups.push_back(Duplicates(streetName, type, prev));
 				inSegment = true;
 				prevNoInSegment = prev;
-				while (*it == prev && it != nums.end()) {
+				while (it != nums.end()  && *it == prev) {
 					prev = *it;
 					++it;
 				}
