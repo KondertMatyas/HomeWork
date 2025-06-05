@@ -21,9 +21,15 @@
     <ClCompile Include="Street.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Duplicates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Street.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Duplicates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

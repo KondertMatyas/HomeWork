@@ -51,6 +51,18 @@ list<Street> load(string fileName) {
 }
 
 
+void process(list<Street> streets) {
+    for (Street street : streets) {
+        list<Duplicates> dups = street.getAllDups();
+        for (Duplicates dup : dups) {
+            dup.print();
+        }
+    }
+}
+
+
+
+
 int main()
 {
     string fileName;
@@ -58,10 +70,7 @@ int main()
     cin >> fileName;
     list<Street> streets = load(fileName);
 
-    for (Street street : streets)
-    {
-        street.print();
-    }
+    process(streets);
 
     return 0;
 }
